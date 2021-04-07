@@ -15,6 +15,7 @@ import {
   HeaderButtons,
   HeaderContainerArea,
   HelloName,
+  HiderContentInfo,
   HideValuesButton,
   LoanArea,
   LoanDescriptionText,
@@ -34,7 +35,11 @@ export const MainScreen = () => {
         <HelloName>Olá, Marlone</HelloName>
         <HeaderButtons>
           <HideValuesButton onPress={() => setInfoVisible(!infoVisible)}>
-            <Icon name="eye-off-outline" size={24} color="#fff" />
+            {infoVisible ? (
+              <Icon name="eye-off-outline" size={24} color="#fff" />
+            ) : (
+              <Icon name="eye-outline" size={24} color="#fff" />
+            )}
           </HideValuesButton>
           <ConfigButton>
             <Icon name="settings-outline" size={24} color="#fff" />
@@ -49,7 +54,7 @@ export const MainScreen = () => {
             <TitleArea>Cartão de crédito</TitleArea>
           </HeaderContainerArea>
           <Description>Fatura atual</Description>
-          {infoVisible && (
+          {infoVisible ? (
             <>
               <ActualValueBill>R$17,23</ActualValueBill>
               <AvailableLimitText>
@@ -57,6 +62,8 @@ export const MainScreen = () => {
                 <ValueAvailableText>R$ 186,34</ValueAvailableText>
               </AvailableLimitText>
             </>
+          ) : (
+            <HiderContentInfo height="50px"></HiderContentInfo>
           )}
         </BillArea>
         <BalanceAccountArea>
@@ -66,15 +73,23 @@ export const MainScreen = () => {
           </HeaderContainerArea>
 
           <Description>Saldo disponível</Description>
-          {infoVisible && <BalanceAccountText>R$220,99</BalanceAccountText>}
+          {infoVisible ? (
+            <BalanceAccountText>R$220,99</BalanceAccountText>
+          ) : (
+            <HiderContentInfo height="30px"></HiderContentInfo>
+          )}
         </BalanceAccountArea>
         <LoanArea>
           <HeaderContainerArea>
-            <Icon name="document-outline" size={24} color="#666" />
+            <Icon name="analytics-outline" size={24} color="#666" />
             <TitleArea>Empréstimo</TitleArea>
           </HeaderContainerArea>
           <LoanDescriptionText>Valor disponivel de até</LoanDescriptionText>
-          {infoVisible && <LoanValueText>R$ 3.987,93</LoanValueText>}
+          {infoVisible ? (
+            <LoanValueText>R$ 3.987,93</LoanValueText>
+          ) : (
+            <HiderContentInfo height="15px"></HiderContentInfo>
+          )}
         </LoanArea>
       </ScrollContainer>
       <BottomTabs>

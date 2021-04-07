@@ -13,7 +13,7 @@ export const BottomTabItemComponent = (props: IBottomTabItem) => {
   return (
     <>
       <BottomTabItem onPress={props.onPress}>
-        <Icon name={props.icon} size={20} color="#fff" />
+        <Icon name={props.icon} size={22} color="#fff" />
         <TextBottomTab>{props.text}</TextBottomTab>
       </BottomTabItem>
     </>

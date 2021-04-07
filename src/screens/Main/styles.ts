@@ -1,5 +1,9 @@
 import styled from "styled-components/native";
 
+interface IHiderContentInfo {
+  height: string;
+}
+
 export const Container = styled.View`
   flex: 1;
   background: #8905be;
@@ -8,11 +12,11 @@ export const Container = styled.View`
 `;
 
 export const Header = styled.View`
-  padding: 0 0 40px 0;
+  padding: 0 0 30px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 40px 18px 10px 18px;
+  margin: 40px 18px 0px 18px;
 `;
 
 export const HelloName = styled.Text`
@@ -27,7 +31,6 @@ export const ScrollContainer = styled.ScrollView.attrs(() => ({
   showsHorizontalScrollIndicator: false,
 }))`
   flex: 15;
-
   margin-bottom: 20px;
   margin: 0 18px;
 `;
@@ -136,19 +139,26 @@ export const ValueAvailableText = styled.Text`
 `;
 
 export const BalanceAccountText = styled.Text`
-  color: #222;
+  color: #444;
   font-family: "RobotoBold";
   font-size: 28px;
 `;
 
 export const LoanDescriptionText = styled.Text`
-  color: #111;
+  color: #444;
   font-family: "RobotoMedium";
   font-size: 15px;
 `;
 
 export const LoanValueText = styled.Text`
-  color: #111;
+  color: #444;
   font-family: "RobotoBold";
   font-size: 16px;
+`;
+
+export const HiderContentInfo = styled.View<IHiderContentInfo>`
+  width: 100%;
+  background: #eee;
+  height: ${(props) => props.height};
+  margin-top: 7px;
 `;
