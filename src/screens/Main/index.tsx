@@ -4,22 +4,22 @@ import Icon from "react-native-vector-icons/Ionicons";
 import {
   ActualValueBill,
   AvailableLimitText,
-  BalanceAccountArea,
   BalanceAccountText,
-  BillArea,
   BottomTabs,
   ConfigButton,
   Container,
   Description,
+  EmulateLoan,
+  EmulateLoanText,
   Header,
   HeaderButtons,
   HeaderContainerArea,
   HelloName,
   HiderContentInfo,
   HideValuesButton,
-  LoanArea,
   LoanDescriptionText,
   LoanValueText,
+  ScrollAreasContainer,
   ScrollContainer,
   TitleArea,
   ValueAvailableText,
@@ -48,7 +48,7 @@ export const MainScreen = () => {
       </Header>
 
       <ScrollContainer>
-        <BillArea>
+        <ScrollAreasContainer>
           <HeaderContainerArea>
             <Icon name="card-outline" size={24} color="#666" />
             <TitleArea>Cartão de crédito</TitleArea>
@@ -63,10 +63,10 @@ export const MainScreen = () => {
               </AvailableLimitText>
             </>
           ) : (
-            <HiderContentInfo height="50px"></HiderContentInfo>
+            <HiderContentInfo height="62px"></HiderContentInfo>
           )}
-        </BillArea>
-        <BalanceAccountArea>
+        </ScrollAreasContainer>
+        <ScrollAreasContainer>
           <HeaderContainerArea>
             <Icon name="cash-outline" size={24} color="#666" />
             <TitleArea>Conta</TitleArea>
@@ -76,21 +76,26 @@ export const MainScreen = () => {
           {infoVisible ? (
             <BalanceAccountText>R$220,99</BalanceAccountText>
           ) : (
-            <HiderContentInfo height="30px"></HiderContentInfo>
+            <HiderContentInfo height="36px"></HiderContentInfo>
           )}
-        </BalanceAccountArea>
-        <LoanArea>
+        </ScrollAreasContainer>
+        <ScrollAreasContainer>
           <HeaderContainerArea>
             <Icon name="analytics-outline" size={24} color="#666" />
             <TitleArea>Empréstimo</TitleArea>
           </HeaderContainerArea>
           <LoanDescriptionText>Valor disponivel de até</LoanDescriptionText>
           {infoVisible ? (
-            <LoanValueText>R$ 3.987,93</LoanValueText>
+            <>
+              <LoanValueText>R$ 3.987,93</LoanValueText>
+              <EmulateLoan>
+                <EmulateLoanText>Simular empréstimo</EmulateLoanText>
+              </EmulateLoan>
+            </>
           ) : (
-            <HiderContentInfo height="15px"></HiderContentInfo>
+            <HiderContentInfo height="60px"></HiderContentInfo>
           )}
-        </LoanArea>
+        </ScrollAreasContainer>
       </ScrollContainer>
       <BottomTabs>
         <BottomTabItemComponent

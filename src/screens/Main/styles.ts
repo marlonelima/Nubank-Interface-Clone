@@ -76,31 +76,15 @@ export const ConfigButton = styled.TouchableOpacity`
   align-items: center;
 `;
 
-export const BillArea = styled.View`
+export const ScrollAreasContainer = styled.View`
   width: 100%;
-  height: 190px;
+
   background: #fff;
   border-radius: 2px;
   padding: 30px 20px;
+  margin-bottom: 20px;
 `;
 
-export const BalanceAccountArea = styled.View`
-  width: 100%;
-  height: 160px;
-  background: #fff;
-  margin-top: 15px;
-  border-radius: 2px;
-  padding: 30px 20px;
-`;
-
-export const LoanArea = styled.View`
-  width: 100%;
-  height: 150px;
-  background: #fff;
-  margin-top: 15px;
-  border-radius: 2px;
-  padding: 30px 20px;
-`;
 export const HeaderContainerArea = styled.View`
   flex-direction: row;
   align-items: center;
@@ -139,19 +123,19 @@ export const ValueAvailableText = styled.Text`
 `;
 
 export const BalanceAccountText = styled.Text`
-  color: #444;
+  color: #222;
   font-family: "RobotoBold";
   font-size: 28px;
 `;
 
 export const LoanDescriptionText = styled.Text`
-  color: #444;
+  color: #222;
   font-family: "RobotoMedium";
   font-size: 15px;
 `;
 
 export const LoanValueText = styled.Text`
-  color: #444;
+  color: #222;
   font-family: "RobotoBold";
   font-size: 16px;
 `;
@@ -161,4 +145,21 @@ export const HiderContentInfo = styled.View<IHiderContentInfo>`
   background: #eee;
   height: ${(props) => props.height};
   margin-top: 7px;
+`;
+
+export const EmulateLoan = styled.TouchableOpacity`
+  padding: 5px 10px;
+  width: 50%;
+  border: 1px solid #8905be;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+`;
+
+export const EmulateLoanText = styled.Text`
+  color: #8905be;
+  font-size: 13px;
+  font-family: "RobotoRegular";
 `;
