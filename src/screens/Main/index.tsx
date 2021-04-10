@@ -88,12 +88,13 @@ export const MainScreen = () => {
             <Icon name="analytics-outline" size={24} color="#666" />
             <TitleArea>Empréstimo</TitleArea>
           </HeaderContainerArea>
-          <LoanDescriptionText>Valor disponivel de até</LoanDescriptionText>
           {infoVisible ? (
             <>
+              <LoanDescriptionText>Valor disponivel de até</LoanDescriptionText>
+
               <LoanValueText>R$ 3.987,93</LoanValueText>
               <EmulateLoan>
-                <EmulateLoanText>Simular empréstimo</EmulateLoanText>
+                <EmulateLoanText>SIMULAR EMPRÉSTIMO</EmulateLoanText>
               </EmulateLoan>
             </>
           ) : (

@@ -148,7 +148,7 @@ export const HiderContentInfo = styled.View<IHiderContentInfo>`
 `;
 
 export const EmulateLoan = styled.TouchableOpacity`
-  padding: 5px 10px;
+  padding: 10px 15px;
   width: 50%;
   border: 1px solid #8905be;
   border-radius: 7px;
