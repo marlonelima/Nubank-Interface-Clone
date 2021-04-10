@@ -29,6 +29,10 @@ import { BottomTabItemComponent } from "../../components/BottomTabItem";
 export const MainScreen = () => {
   const [infoVisible, setInfoVisible] = useState(true);
 
+  const scrollMainArea = ({ nativeEvent }) => {
+    console.log(nativeEvent);
+  };
+
   return (
     <Container>
       <Header>
@@ -47,7 +51,7 @@ export const MainScreen = () => {
         </HeaderButtons>
       </Header>
 
-      <ScrollContainer>
+      <ScrollContainer onScrollStart={scrollMainArea}>
         <ScrollAreasContainer>
           <HeaderContainerArea>
             <Icon name="card-outline" size={24} color="#666" />

@@ -30,7 +30,7 @@ export const ScrollContainer = styled.ScrollView.attrs(() => ({
   showsVerticalScrollIndicator: false,
   showsHorizontalScrollIndicator: false,
 }))`
-  flex: 15;
+  flex: 20;
   margin-bottom: 20px;
   margin: 0 18px;
 `;
@@ -47,7 +47,7 @@ export const BottomTabs = styled.ScrollView.attrs(() => ({
   width: 100%;
   height: 100px;
   margin-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 `;
 
 export const HeaderButtons = styled.View`

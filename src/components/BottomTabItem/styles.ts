@@ -1,8 +1,8 @@
 import styled from "styled-components/native";
 
 export const BottomTabItem = styled.TouchableOpacity`
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   background: rgba(255, 255, 255, 0.25);
   border-radius: 5px;
   margin-right: 11px;
